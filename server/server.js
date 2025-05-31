@@ -9,21 +9,21 @@ const User = require('./models/Users');
 // Test data to insert into the database.
 const testUser = async () => {
   try {
-    // Connect to the MongoDB.
+    // // Connect to the MongoDB.
     await connectDB();
 
     // Create a new user with sample data.
-    const newUser = new User({
-      username: "Jamie Doe",
+    const newUser = await User.create({
+      username: "Tom Doe",
       habits: [{
-        name: "Read a book",
+        name: "Brush Teeth",
         frequency: "daily",
         history: [{ date: new Date(), completed: true }],
         streak: 1,
       }]
-    });
-    await newUser.save();  // Insert the new user into the database.
+    }); // Insert the new user into the database.
     console.log("Sample user save successful");
+    console.log(newUser);
   } catch (error) {
     console.error("Error saving sample user:", error);
   } finally {
