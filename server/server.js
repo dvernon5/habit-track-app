@@ -1,6 +1,6 @@
 // This file is the entry point for the server application.
 // Import Database Server connection to test data
-const mongoose = require('mongoose');
+const { default: mongoose } = require('mongoose');
 const connectDB = require('./config/db');
 
 // Import the User model to interact with the Users collection.
