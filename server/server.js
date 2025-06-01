@@ -14,9 +14,9 @@ const testUser = async () => {
 
     // Create a new user with sample data.
     const newUser = await User.create({
-      username: "Tom Doe",
+      username: "Sarah Doe",
       habits: [{
-        name: "Brush Teeth",
+        name: "Tennis Practice",
         frequency: "daily",
         history: [{ date: new Date(), completed: true }],
         streak: 1,
